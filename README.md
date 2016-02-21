@@ -1,7 +1,11 @@
-# auto-sheep
+auto-sheep
+==========
 
-./install.sh
+Automatically update and start dazed-sheep without a githook
 
-then add in a cron ./update.sh
+## Setup
+Firstly, you'll want to
+    
+    ./install.sh
 
-Auto-update dazed-sheep without githook
+Then you'll need to add `update.sh` to cron so that the server can update
