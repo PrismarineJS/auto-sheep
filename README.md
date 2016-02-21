@@ -1,7 +1,7 @@
-# auto-squid
+# auto-sheep
 
 ./install.sh
 
 then add in a cron ./update.sh
 
-Auto-update flying-squid without githook
+Auto-update dazed-sheep without githook
