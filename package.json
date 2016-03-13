@@ -1,0 +1,33 @@
+{
+  "name": "auto-sheep",
+  "version": "1.0.0",
+  "description": "Automatically update and start dazed-sheep without a githook",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dazed-sheep/auto-sheep.git"
+  },
+  "engines": {
+    "node": ">=5"
+  },
+  "keywords": [],
+  "author": "mhsjlw <mhsjlw@aol.com>",
+  "contributors": [
+    "rom1504"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dazed-sheep/auto-sheep/issues"
+  },
+  "homepage": "https://github.com/dazed-sheep/auto-sheep#readme",
+  "dependencies": {
+    "dazed-sheep": "^1.0.0",
+    "express": "^4.13.4",
+    "ngrok": "^2.1.6",
+    "prettier-bytes": "^1.0.3",
+    "usage": "^0.7.1"
+  }
+}

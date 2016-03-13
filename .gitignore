@@ -1,1 +1,3 @@
-dazed-sheep
+dazed-sheep/
+node_modules/
+npm-debug.log
