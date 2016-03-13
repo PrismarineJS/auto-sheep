@@ -10,6 +10,8 @@ var usage = require('usage');
 let url = null;
 let connection = null;
 let listening = false;
+let memory = null;
+let cpu = null;
 
 var server = mc.createMCServer({
   port: 25565,
@@ -21,13 +23,15 @@ server.on('listening', function() {
   listening = true;
 });
 
+// not sure if this is the right PID
+var pid = server.pid;
 
-// TODO: web preformance statistics
-// var pid = server.pid;
-
-// usage.lookup(pid, function(err, result) {
-//   console.log(result);
-// });
+setInterval(function() {
+  usage.lookup(pid, function(err, result) {
+    memory = prettierBytes(result.memory);
+    cpu = result.cpu;
+  });
+}, 10000);
 
 ngrok.authtoken(process.env.NGROK_API_TOKEN, function(err, authtoken) {
   if(listening == true) {
@@ -52,7 +56,7 @@ app.get('/', function (req, res) {
   if(connection == null) {
     res.send('server not ready yet, try again in a minute');
   } else {
-    res.send(connection);
+    res.send('address: ' + connection + '\ncpu usage: ' + Math.floor(cpu) + '% memory: ' + memory);
   }
 });
 

@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/dazed-sheep/auto-sheep#readme",
   "dependencies": {
-    "dazed-sheep": "^1.0.0",
+    "dazed-sheep": "^1.1.0",
     "express": "^4.13.4",
     "ngrok": "^2.1.6",
     "prettier-bytes": "^1.0.3",
